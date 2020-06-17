@@ -80,7 +80,7 @@ class Sepconv(nn.Module):
         self.mid_channels = 60
         self.out_channels = 30
         self.conv1 = nn.Conv2d(self.in_channels,self.mid_channels,kernel_size=3,stride=1,padding=1,groups=30)
-        self.conv2 = nn.Conv2d(self.mid_channels,self.out_channels,kernel_size=1,stride=1,groups=30)
+        self.conv2 = nn.Conv2d(self.mid_channels,self.out_channels,kernel_size=1,stride=1)
         self.norm = nn.BatchNorm2d(self.out_channels)
 
         self.set_parameters()
